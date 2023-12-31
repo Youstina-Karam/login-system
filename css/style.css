@@ -1,0 +1,14 @@
+body{
+    background: #24353f;
+}
+
+input::placeholder{
+    color:#fff !important;
+}
+.form-control:focus{
+    border-color: #17a2b8 !important;
+    box-shadow: 0 0 0 2px rgba(13,110,253,.25)
+}
+.btn:hover{
+    color: #fff !important;
+}
