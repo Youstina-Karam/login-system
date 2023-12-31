@@ -51,7 +51,7 @@ function register() {
       icon: "success",
       title: "Done!",
     });
-          location.replace('');
+          location.replace();
    
   }
   document.getElementById("error").innerHTML = error;
@@ -145,6 +145,6 @@ function checkEmail() {
 
 logoutBtn?.addEventListener("click", function () {
   localStorage.removeItem("usernameLogin");
-    location.replace('');
+    location.replace();
  
 });
