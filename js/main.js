@@ -13,7 +13,6 @@ var baseURL = "";
 for (var i = 0; i < pathparts.length - 1; i++) {
   baseURL += "/" + pathparts[i];
 }
-console.log(location)
 var usersList = [];
 if (localStorage.getItem("usersList")) {
   usersList = JSON.parse(localStorage.getItem("usersList"));
@@ -52,7 +51,7 @@ function register() {
       icon: "success",
       title: "Done!",
     });
-          location.replace(location.hostname + '/login-system/');
+          location.replace('');
    
   }
   document.getElementById("error").innerHTML = error;
@@ -73,7 +72,7 @@ function login() {
       ) {
         localStorage.setItem("usernameLogin", usersList[i].name);
         
-          location.replace(location.hostname + '/login-system/home.html');
+          location.replace('home.html');
       } else {
         error = "email or password not correct";
       }
@@ -146,6 +145,6 @@ function checkEmail() {
 
 logoutBtn?.addEventListener("click", function () {
   localStorage.removeItem("usernameLogin");
-    location.replace(location.hostname + '/login-system/');
+    location.replace('');
  
 });
