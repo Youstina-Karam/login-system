@@ -52,7 +52,7 @@ function register() {
       icon: "success",
       title: "Done!",
     });
-    location.replace(location.href);
+          location.replace(location.hostname + '/login-system/');
    
   }
   document.getElementById("error").innerHTML = error;
@@ -72,7 +72,8 @@ function login() {
         usersList[i].password.toLowerCase() == userData.pass.toLowerCase()
       ) {
         localStorage.setItem("usernameLogin", usersList[i].name);
-          location.replace( location.href + "/home.html");
+        
+          location.replace(location.hostname + '/login-system/home.html');
       } else {
         error = "email or password not correct";
       }
@@ -145,6 +146,6 @@ function checkEmail() {
 
 logoutBtn?.addEventListener("click", function () {
   localStorage.removeItem("usernameLogin");
-    location.replace('/');
+    location.replace(location.hostname + '/login-system/');
  
 });
